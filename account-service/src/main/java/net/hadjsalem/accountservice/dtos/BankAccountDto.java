@@ -1,6 +1,7 @@
 package net.hadjsalem.accountservice.dtos;
 import lombok.*;
 import net.hadjsalem.accountservice.enums.AccountType;
+import net.hadjsalem.accountservice.model.Customer;
 
 import java.time.LocalDate;
 
@@ -11,6 +12,6 @@ public class BankAccountDto {
     private LocalDate createAt;
     private String currency;
     private AccountType type;
-   /* private Customer customer;
-    private Long customerId;*/
+    private Customer customer;
+    private Long customerId;
 }

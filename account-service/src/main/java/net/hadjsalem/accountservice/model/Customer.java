@@ -2,11 +2,9 @@ package net.hadjsalem.accountservice.model;
 
 import lombok.*;
 
-@Getter @Setter @ToString
-@AllArgsConstructor
-@NoArgsConstructor
+@Getter @Setter
 public class Customer {
-    private Long id ;
+    private Long customerId ;
     private String firstName;
     private String lastName;
     private String email;

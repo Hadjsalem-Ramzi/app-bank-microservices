@@ -17,12 +17,14 @@ public class BankAccountMapper {
 
 
     public BankAccountDto from(BankAccount bankAccount){
-       return mapper.map(bankAccount,BankAccountDto.class);
-   }
+        mapper.typeMap(BankAccount.class, BankAccountDto.class)
+                .addMappings(m -> m.map(BankAccount::getCustomerId, BankAccountDto::setCustomerId
+        ));
+        return mapper.map(bankAccount, BankAccountDto.class);
+    }
 
-   public BankAccount from(BankAccountDto bankAccountDto){
-       return  mapper.map(bankAccountDto,BankAccount.class);
-   }
-
+    public BankAccount from(BankAccountDto bankAccountDto){
+        return  mapper.map(bankAccountDto, BankAccount.class);
+    }
 
 }
